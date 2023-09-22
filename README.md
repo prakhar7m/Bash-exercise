@@ -1,66 +1,47 @@
-# Homework Assignment 1
-## ANLY 502
-## Anderson Monken
-
-### Date Given: January 20, 2022
-### Due Date: January 26, 2022 11:59 pm
-
-**You should thoroughly read through the entire assignment before beginning your work! Don't start the cluster until you are ready.**
-
 ## Cloud9 BASH Exercise
 
-Goals:
+**Goal: Exploratory Data Analysis of Newborn Weight Data**
 
-1. Clone your Git repo to Cloud9 (follow steps from previous labs if you need a refresher)
+**Project Description:**
 
-2. There is a test environment folder in your Git repo with data. **You will use "basic" BASH commands only** to create summary statistics about the dataset `NCBirths2004.csv`.
+In this mini project, I explored dataset containing information about newborn babies' weights in North Carolina in 2004. The main goal was to extract meaningful insights using basic BASH commands exclusively. Below are the tasks and outcomes achieved:
 
-All the work on this repo and environment need to be BASH commands. That means changing directories, listing files, moving files, making directories, searching, doing math, etc.
+**1. Setting up the Environment:**
+   - Cloned the Git repository to a Cloud9 environment for seamless data analysis.
 
-2. Examine the data file using BASH commands
+**2. Data Inspection and Preparation:**
+   - Examined the dataset using BASH commands to gain a better understanding.
+   - Identified and extracted the column names from the dataset.
+   - Saved the column names to a file named `headers.txt`.
 
-3. Find the column names of the data file and save to a file called `headers.txt`
+**3. Creating Reproducible Code:**
+   - Ensured code reproducibility by saving all BASH commands into a script file named `data-script.bash`. This script serves as a one-stop solution for the entire data analysis process, including appropriate comments for clarity.
 
-4. We want to make our BASH code reproducible so that we could run this process automatically. Save the command to accomplish step 5 into a file called `data-script.bash`. Start off by experimenting in the console, and eventually use a vim editor (or Cloud9 editor) to put the code into the BASH file. Make sure you comment code appropriately!
+**4. Analyzing Newborn Weight Data:**
+   - Utilized BASH commands to perform group-wise analysis on the dataset.
+   - Filtered the dataset to only include rows where the `Smoker` variable is 'Yes' and extracted the `Weight` variable.
+   - Calculated and saved the median weight of babies born to smoking mothers in `smoker-yes-med.txt`.
+   - Repeated the process for non-smoking mothers and saved the median weight in `smoker-no-med.txt`.
+   - Printed the contents of both files with clear identifiers.
 
-5. Let's do a group-by and summarize in "basic"" BASH commands only! *Get the **median** `Weight` of babies for smokers and non-smokers in the dataset.* This will require you to do some Googling since we have not explicitly gone through all the commands needed. That's OK because we have discussed help pages and command syntax so you should be able to find the answers needed to get to a result. I am not looking for a unique (re-invent the wheel) solution. I want you to use the skills you know, and then use Google, StackOverflow, etc. to learn the additional tools to solve the problem at hand. You do not have to complete each step in a single command. But you must be able to run your `data-script.bash` file to accomplish the all steps from scratch. The TAs will run your script and expect to get nice outputs!
+**5. Interpretation:**
+   - In a comment within the script (`#` for comments), provided a non-technical statement summarizing the relationship between the average weight of babies born to smoking and non-smoking mothers.
 
-Here are the requirements:
+**Bonus Task (3 points):**
+   - Extended the analysis to calculate the average weight of babies for mothers where Alcohol is 'Yes' and 'No', saving the results accordingly.
 
-        1. Filter the dataset to only rows where the `Smoker` variable is `Yes`. There are many ways to accomplish this.
-        2. Select the Weight variable only 
-        3. Get the average of all the numbers - (make sure you do not include the variable name!)
-        4. Save the average into a file called `smoker-yes-med.txt`
-        5. Repeat the process where `Smoker` variable is `No` and change the file name accordingly.
-        6. Print the contents of both average files and include identifying info for each number so we know which is which!
-        7. In a comment, (`#` for comment), write a summary NON-TECHNICAL statement describing the relationship between average weight for smoking and non-smoking mothers.
+**6. Version Control and GitHub Upload:**
+   - Organized the project files and ensured they were ready for version control.
+   - Added, committed, and pushed the project to a GitHub repository. The included files are:
+     - `README.md`
+     - `NCBirths2004.csv`
+     - `headers.txt`
+     - `smoker-yes-med.txt`
+     - `smoker-no-med.txt`
+     - `data-script.bash`
+     - `.bash_history` (Bonus)
 
-**BONUS** (3 points): Follow step 5 but this time find the **average** `Weight` of babies for mothers where Alcohol==Yes and Alcohol==No.
+This project demonstrates my ability to work with data using basic BASH commands, maintain code reproducibility, and effectively communicate findings in a non-technical manner.
 
-6. Add, commit, and push your organized repo to GitHub. The files included must be:
-  - `README.md`
-  - `NCBirths2004.csv`
-  - `headers.txt`
-  - `smoker-yes-med.txt`
-  - `smoker-no-med.txt`
-  - `data-script.bash`
-  - IF DOING BONUS: `alcohol-yes-avg.txt`, `alcohol-no-avg.txt`
 
-7. Copy your .bash_history file from your home folder into your Git repo. Add, commit, and push this file to your remote GitHub repo. Make sure you follow the steps in order, we are expecting to see multiple commits!
 
-8. Submit the url of your repo in Canvas to confirm that you have completed HW1!
-
-## Grading Rubric
-
-If your the submission meets or exceeds the requirements, is creative, is well thought-out, has proper presentation and grammar, and is at the graduate student level, then the submission will get full credit. Otherwise, partial credit will be given and deductions may be made for any of the following reasons:
-
-Points will be deducted for any of the following reasons:
-
-* The instructions are not followed
-* There are missing sections of the deliverable
-* The overall presentation and/or writing is sloppy
-* There are no comments in your code
-* There are files in the repository other than those requested
-* There are absolute filename links in your code
-* The repository structure is altered in any way
-* Files are named incorrectly (wrong extensions, wrong case, etc.)
